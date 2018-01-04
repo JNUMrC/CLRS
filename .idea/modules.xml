@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/introductionToAlgorithms.iml" filepath="$PROJECT_DIR$/.idea/modules/introductionToAlgorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/introductionToAlgorithms_main.iml" filepath="$PROJECT_DIR$/.idea/modules/introductionToAlgorithms_main.iml" group="introductionToAlgorithms" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/introductionToAlgorithms_test.iml" filepath="$PROJECT_DIR$/.idea/modules/introductionToAlgorithms_test.iml" group="introductionToAlgorithms" />
+    </modules>
+  </component>
+</project>
