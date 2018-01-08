@@ -3,6 +3,8 @@ package chapter9;
 import chapter2.InsertionSort;
 import chapter7.QuickSort;
 
+import java.util.Arrays;
+
 /**
  * @Author : jnu_mrc jnu_mrc1990@163.com
  * @Date : Created in 9:46 2018/1/3
@@ -11,6 +13,12 @@ public class Select {
     public static void main(String[] args) {
         int[] arr = {3, 1, 9, 4, 7, 8, 6, 2, 5};
         System.out.println(select(arr, 0, arr.length - 1, 6));
+
+
+        arr = new int[]{7, 3, 6, 1, 9, 8, 2, 5, 4};
+        System.out.println(select(arr,0,3,2));
+        arr = new int[]{7, 3, 6, 1, 9, 8, 2, 5, 4};
+        System.out.println(select(arr,4,8,2));
     }
 
     public static int select(int[] arr, int p, int r, int i) {
@@ -37,12 +45,12 @@ public class Select {
         int len = n / 5;
         for (int i = 0; i < len; i++) {
             int start = 5 * i + p;
-            InsertionSort.insertionSort(arr, start, start + 4);
+            InsertionSort.insertionSort(arr, start, start + 5);
         }
         int a = n % 5;
         if (a != 0) {
             int start = p + n - a;
-            InsertionSort.insertionSort(arr, start, n - 1);
+            InsertionSort.insertionSort(arr, start, n);
         }
         int[] t;
         if (a == 0) {

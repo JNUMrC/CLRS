@@ -6,8 +6,7 @@ import tool.MrcTool;
 import java.util.Arrays;
 
 /**
- * 随机化版快排
- *
+ * 快排
  * @Author : jnu_mrc jnu_mrc1990@163.com
  * @Date : Created in 15:56 2017/12/18
  */
@@ -36,7 +35,8 @@ public class QuickSort {
     }
 
     /**
-     * 最坏情况时间复杂度为θ(nlgn)的快排算法，使用了尾递归
+     * 最坏情况仍保持时间复杂度为θ(nlgn)的快排算法，使用了尾递归。
+     * 并不说明他比另外的实现更好，因为其常数项会较大，在平均输入下没有必要用这个算法。
      */
     public static void worstCaseQuickSort(int[] arr, int p, int r){
         while (p < r){
@@ -49,7 +49,7 @@ public class QuickSort {
     }
 
     /**
-     * 随机化快排
+     * 随机化快排，输入无关，期望时间复杂度θ(nlgn)
      */
     public static void quickSort(int[] arr, int p, int r) {
         if (p < r) {
@@ -76,7 +76,12 @@ public class QuickSort {
     }
 
     public static int partition(int[] arr, int p, int r, int pivot) {
-        swap(arr, r, pivot);
+        for (int i = p; i <= r; i++) {
+            if(arr[i] == pivot){
+                swap(arr,r,i);
+                break;
+            }
+        }
         return partition(arr, p, r);
     }
 
