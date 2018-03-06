@@ -3,6 +3,7 @@ package chapter9;
 import java.util.Arrays;
 
 /**
+ * 返回最小的i个数，乱序
  * @Author : jnu_mrc jnu_mrc1990@163.com
  * @Date : Created in 18:17 2018/1/8
  */
